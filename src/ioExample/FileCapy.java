@@ -13,7 +13,7 @@ public class FileCapy {
 
 		try {
 			fis = new FileInputStream("lotto.jpg");
-			fos = new FileOutputStream("dooly.jpg");
+			fos = new FileOutputStream("lotto2.jpg");
 
 			int data = 0;
 
