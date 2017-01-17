@@ -1,0 +1,29 @@
+package ioExample;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.util.Arrays;
+
+public class IOExample {
+
+	public static void main(String[] args) {
+		
+		byte[] src = {0,1,2,3,4,5,6,7,8,9};
+		byte[] dest = null;
+		
+		ByteArrayInputStream bais = new ByteArrayInputStream(src); //연결시킴
+		
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		
+		int data = 0;
+		
+		while((data = bais.read())!= (-1)){
+			baos.write(data);
+		}
+		
+		System.out.println(Arrays.toString(src));
+		System.out.println(Arrays.toString(baos.toByteArray()));
+
+		
+	}
+}
